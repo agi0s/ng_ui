@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Whitney; 
+    src: url(./assets/fonts/Whitney-Light.otf);
+}
+
+body {
+    font-family: Whitney; 
+}
+
+nav ul.left {
+	margin-left: 5%;
+}
+
+nav .brand-logo.right {
+	margin-right: 5%;
+}

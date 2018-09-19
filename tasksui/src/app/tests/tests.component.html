@@ -1,0 +1,24 @@
+ <div class="container">>
+ <script>
+   mocha.setup('bdd');
+ </script>
+ <script>
+   var assert = chai.assert;
+ </script>
+
+
+ <!-- в элементе с id="mocha" будут результаты тестов -->
+ <div id="mocha"></div>
+ <div style="margin-left: 5%">
+   <p>Methods used:</p>
+   <ul>
+     <li>assert.equal</li>
+     <li>deepEqual</li>
+     <li>isTrue</li>
+   </ul> 
+ </div>
+ <!-- запустить тесты! -->
+ <script>
+   mocha.run();
+ </script>
+ </div>

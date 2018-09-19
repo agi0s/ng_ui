@@ -1,0 +1,21 @@
+<div class="container">
+<h4>All tasks</h4>
+
+
+<ul class="collection row" #tasksList>
+  <li *ngFor = "let task of tasks">
+    <a class="collection-item col s3" style="padding: 10px;"
+    [href]="task.name">
+      <span style="border-right: 1px dashed #797979; display: inline-block; width: 25px;">{{task.id}}</span>
+      <span style="margin-left: 15px"> {{task.name}}</span>
+    </a>
+  </li>
+</ul>
+
+        
+<!-- <app-function [task]="selectedTask">
+  <div #inputs></div>
+</app-function> -->
+</div>
+ 
+<!-- (click)='onSelect(task); initInput(task, inputs)'-->

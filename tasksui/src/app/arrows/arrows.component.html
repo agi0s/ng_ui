@@ -1,0 +1,69 @@
+<app-functions></app-functions>
+
+<!--####################################################-->
+<div class="container">
+    <div class="row">
+      <div  class="col s6" *ngIf="router.url === '/halfArrowRight'">
+          <h4>halfArrowRight function</h4>
+            <div class="input-field col s6">
+              <input [(ngModel)]="lines" id="lines" type="text" class="validate">
+              <label class="active" for="lines">Lines(height)</label>
+            </div>
+            <div class="input-field col s6">
+              <input [(ngModel)]="symbol" id="symbol" type="text" class="validate">
+              <label class="active" for="symbol">Symbol</label>
+            </div>
+            <a class="waves-effect waves-light btn grey darken-2" (click)="generateInput()">Generate Input</a>
+            <button class="waves-effect waves-light btn" (click)="printOutput(halfArrowRight)">Run</button>
+      </div>
+
+      <div  class="col s6" *ngIf="router.url === '/halfArrowLeft'">
+        <h4>halfArrowLeft function</h4>
+        <div class="input-field col s6">
+            <input [(ngModel)]="lines" id="lines" type="text" class="validate">
+            <label class="active" for="lines">Lines(height)</label>
+          </div>
+          <div class="input-field col s6">
+            <input [(ngModel)]="symbol" id="symbol" type="text" class="validate">
+            <label class="active" for="symbol">Symbol</label>
+          </div>
+          <a class="waves-effect waves-light btn grey darken-2" (click)="generateInput()">Generate Input</a>
+          <button class="waves-effect waves-light btn" (click)="printOutput(halfArrowLeft)">Run</button>
+      </div>
+
+      <div  class="col s6" *ngIf="router.url === '/arrowRight'">
+        <h4>arrowRight function</h4>
+        <div class="input-field col s6">
+            <input [(ngModel)]="lines" id="lines" type="text" class="validate">
+            <label class="active" for="lines">Lines(height)</label>
+          </div>
+          <div class="input-field col s6">
+            <input [(ngModel)]="symbol" id="symbol" type="text" class="validate">
+            <label class="active" for="symbol">Symbol</label>
+          </div>
+          <a class="waves-effect waves-light btn grey darken-2" (click)="generateInput()">Generate Input</a>
+          <button class="waves-effect waves-light btn" (click)="printOutput(arrowRight)">Run</button>
+      </div>
+      
+      <div  class="col s6" *ngIf="router.url === '/arrowLeft'">
+        <h4>arrowLeft function</h4>
+        <div class="input-field col s6">
+            <input [(ngModel)]="lines" id="lines" type="text" class="validate">
+            <label class="active" for="lines">Lines(height)</label>
+          </div>
+          <div class="input-field col s6">
+            <input [(ngModel)]="symbol" id="symbol" type="text" class="validate">
+            <label class="active" for="symbol">Symbol</label>
+          </div>
+          <a class="waves-effect waves-light btn grey darken-2" (click)="generateInput()">Generate Input</a>
+          <button class="waves-effect waves-light btn" (click)="printOutput(arrowLeft)">Run</button>
+      </div>
+      
+      <div class="col s6" id="output" style="border: 1px dashed; height: auto">
+        Here will be the function output
+      </div>
+      </div>
+  
+
+
+</div>

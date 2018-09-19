@@ -1,0 +1,41 @@
+<app-functions></app-functions>
+
+<div class="container">
+<div class="row">
+<div  class="col s6" *ngIf="router.url === '/moreThanAverage'">
+  <h4>moreThanAverage function</h4>
+    <div class="input-field col s12 row">
+      <input [(ngModel)]="inputArray" id="lines" type="text" class="validate">
+      <label class="active" for="lines">Array</label>
+    </div>
+    <div class="row">
+    <a class="waves-effect waves-light btn grey darken-2 disabled" (click)="generateInput()">Generate Input</a>
+    <button class="waves-effect waves-light btn" (click)="printOutputComplex(moreThanAverage)">Run</button>
+  </div>
+  </div>
+
+<div  class="col s6" *ngIf="router.url === '/arrayByRule'">
+  <h4>arrayByRule function</h4>
+    <div class="input-field col s12">
+      <input [(ngModel)]="inputArray" id="lines" type="text" class="validate">
+      <label class="active" for="lines">Array</label>
+    </div>
+    <a class="waves-effect waves-light btn grey darken-2 disabled" (click)="generateInput()">Generate Input</a>
+    <button class="waves-effect waves-light btn" (click)="printOutputComplex(arrayByRule)">Run</button>
+</div>
+
+<div  class="col s6" *ngIf="router.url === '/makeMatrixArray'">
+  <h4>makeMatrixArray function</h4>
+    <div class="input-field col s12">
+      <input [(ngModel)]="matrixNumber" id="lines" type="text" class="validate">
+      <label class="active" for="lines">Number</label>
+    </div>
+    <a class="waves-effect waves-light btn grey darken-2 disabled" (click)="generateInput()">Generate Input</a>
+    <button class="waves-effect waves-light btn" (click)="printOutput(matrix)">Run</button>
+</div>
+
+<div class="col s6" id="output" style="border: 1px dashed; height: auto">
+  Here will be the function output
+</div>
+</div>
+</div>

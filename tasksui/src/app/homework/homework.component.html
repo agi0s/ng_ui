@@ -1,0 +1,176 @@
+<app-functions></app-functions>
+
+<div class="container">
+    <div class="row">
+      <div  class="col s6" *ngIf="router.url === '/drawChessboard'">
+          <h4>drawChessboard function</h4>
+            <div class="input-field col s4">
+              <input [(ngModel)] = "chessHeight" id="lines" type="text" class="validate">
+              <label class="active" for="lines">Lines(height)</label>
+            </div>
+            <div class="input-field col s4">
+              <input [(ngModel)] = "chessWidth" id="width" type="text" class="validate">
+              <label class="active" for="width">Width</label>
+            </div>
+            <div class="input-field col s4">
+              <input [(ngModel)] = "chessSymbol" type="text" class="validate">
+              <label class="active" for="symbol">Symbol</label>
+            </div>
+            <a class="waves-effect waves-light btn grey darken-2" (click)="generateInput()">Generate Input</a>
+            <button class="waves-effect waves-light btn" (click)="printOutputStrict(drawChessboard)">Run</button>
+      </div>
+
+      <div  class="col s6" *ngIf="router.url === '/canWrap'">
+          <h4>canWrap function</h4>
+          <div class="row">
+            <div class="input-field col s6">
+              <input [(ngModel)] = "aSide" id="env1" type="text" class="validate">
+              <label class="active" for="env1">Envelope one: a side</label>
+            </div>
+            <div class="input-field col s6">
+              <input [(ngModel)] = "bSide" id="env2" type="text" class="validate">
+              <label class="active" for="env2">Envelope one: b side</label>
+            </div>
+          </div>
+            <hr>
+            <div class="row">
+            <div class="input-field col s6">
+              <input [(ngModel)] = "cSide" id="env1" type="text" class="validate">
+              <label class="active" for="env1">Envelope two: c side</label>
+            </div>
+            <div class="input-field col s6">
+              <input [(ngModel)] = "dSide" id="env2" type="text" class="validate">
+              <label class="active" for="env2">Envelope two: d side</label>
+            </div>
+          </div>
+            <a class="waves-effect waves-light btn grey darken-2" (click)="generateInput()">Generate Input</a>
+            <button class="waves-effect waves-light btn" (click)="printOutputEnvelope(canWrapEnvelope)">Run</button>
+      </div>
+
+      <div  class="col s6" *ngIf="router.url === '/sortTrigons'">
+          <h4>sortTriangles function</h4>
+          <div class="row trianglesField">
+            <div class="triangle">
+            <div class="input-field col s3">
+              <input value="abc" id="array" type="text" class="validate">
+              <label class="active" for="array">Verticies</label>
+            </div>
+            <div class="input-field col s3">
+                <input value="10" id="array" type="text" class="validate">
+                <label class="active" for="array">side one</label>
+              </div>
+              <div class="input-field col s3">
+                  <input value="10" id="array" type="text" class="validate">
+                  <label class="active" for="array">side two</label>
+                </div>
+                <div class="input-field col s2">
+                    <input value="10" id="array" type="text" class="validate">
+                    <label class="active" for="array">side three</label>
+                </div>
+                </div>
+            <div class="triangle">
+            <div class="input-field col s3">
+              <input value="def" id="array" type="text" class="validate">
+              <label class="active" for="array">Verticies</label>
+            </div>
+            <div class="input-field col s3">
+                <input value="15" id="array" type="text" class="validate">
+                <label class="active" for="array">side one</label>
+              </div>
+              <div class="input-field col s3">
+                  <input value="15" id="array" type="text" class="validate">
+                  <label class="active" for="array">side two</label>
+                </div>
+                <div class="input-field col s2">
+                    <input value="15" id="array" type="text" class="validate">
+                    <label class="active" for="array">side three</label>
+                </div>
+                </div>
+            <div class="triangle">
+            <div class="input-field col s3">
+              <input value="ghi" id="array" type="text" class="validate">
+              <label class="active" for="array">Verticies</label>
+            </div>
+            <div class="input-field col s3">
+                <input value="20" id="array" type="text" class="validate">
+                <label class="active" for="array">side one</label>
+              </div>
+              <div class="input-field col s3">
+                  <input value="20" id="array" type="text" class="validate">
+                  <label class="active" for="array">side two</label>
+                </div>
+                <div class="input-field col s2">
+                    <input value="20" id="array" type="text" class="validate">
+                    <label class="active" for="array">side three</label>
+                </div>
+                </div>
+            </div>
+            
+            <button class="col s1 waves-effect waves-light btn grey darken-2" (click) = "addField()">+</button>
+            <button class="col s1 waves-effect waves-light btn" (click) = "removeField()">x</button>
+            <a class="waves-effect waves-light btn grey darken-2 disabled" (click)="generateInput()">Generate Input</a>
+            <button class="waves-effect waves-light btn" (click)="triangleParser()">Run</button>
+      </div>
+
+      <div  class="col s6" *ngIf="router.url === '/Palindrome'">
+          <h4>Palindrome function</h4>
+            <div class="input-field col s12">
+              <input [(ngModel)]="stringPalindrome" id="string" type="text" class="validate">
+              <label class="active" for="string">String</label>
+            </div>
+            <a class="waves-effect waves-light btn grey darken-2 disabled" (click)="generateInput()">Generate Input</a>
+            <button class="waves-effect waves-light btn" (click)="palindromeOutput(Palindrome)">Run</button>
+      </div>
+  
+      <div  class="col s6" *ngIf="router.url === '/happyTicket'">
+          <h4>happyTicket function</h4>
+            <div class="input-field col s6">
+              <input [(ngModel)] = "ticketMin" id="Min" type="text" class="validate">
+              <label class="active" for="Min">Min</label>
+            </div>
+            <div class="input-field col s6">
+              <input [(ngModel)] = "ticketMax" id="Max" type="text" class="validate">
+              <label class="active" for="Max">Max</label>
+            </div>
+            <a class="waves-effect waves-light btn grey darken-2 disabled" (click)="generateInput()">Generate Input</a>
+            <button class="waves-effect waves-light btn" (click)="ticketOutput(effectiveHappyTicket)">Run</button>
+      </div>
+    
+      <div  class="col s6" *ngIf="router.url === '/numericalSequence'">
+          <h4>numericalSequence function</h4>
+            <div class="input-field col s6">
+              <input [(ngModel)]="sequenceQty" id="quantity" type="text" class="validate">
+              <label class="active" for="quantity">Quantity</label>
+            </div>
+            <div class="input-field col s6">
+              <input [(ngModel)]="sequenceNum" id="number" type="text" class="validate">
+              <label class="active" for="number">Number</label>
+            </div>
+            <a class="waves-effect waves-light btn grey darken-2 disabled" (click)="generateInput()">Generate Input</a>
+            <button class="waves-effect waves-light btn" (click)="sequenceOutput(numericalSequence)">Run</button>
+      </div>
+
+      <div  class="col s6" *ngIf="router.url === '/fibonacci'">
+          <h4>fibonacci function</h4>
+            <div class="input-field col s4">
+              <input [(ngModel)]="fibMin" id="min" type="text" class="validate">
+              <label class="active" for="min">min</label>
+            </div>
+            <div class="input-field col s4">
+              <input [(ngModel)]="fibMax" id="max" type="text" class="validate">
+              <label class="active" for="max">max</label>
+            </div>
+            <div class="input-field col s4">
+              <input [(ngModel)]="fibLength" id="length" type="text" class="validate">
+              <label class="active" for="length">length</label>
+            </div>
+            <a class="waves-effect waves-light btn grey darken-2 disabled" (click)="generateInput()">Generate Input</a>
+            <button class="waves-effect waves-light btn" (click)="printOutput(fibonacci)">Run</button>
+      </div>
+
+    <div class="col s6" id="output" style="border: 1px dashed; height: auto">
+        Here will be the function output
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="row" *ngIf="task">
+<div  class="col s6">
+    <h2>{{task.name}}</h2>
+      <div><span>id: </span>{{task.id}}</div>
+      <div><span>week: </span>{{task.week}}</div>
+      <div><span>lesson: </span>{{task.lesson}}</div>
+
+      <ng-content></ng-content>
+
+      <a class="waves-effect waves-light btn grey darken-2 disabled
+      " >Generate Input</a>
+      <button class="waves-effect waves-light btn">Run</button>
+</div>
+
+
+<div class="col s6" id="output" style="border: 1px dashed; height: 300px">
+  Here will be the function <b>{{task.name}}</b> output
+</div>
+</div>
